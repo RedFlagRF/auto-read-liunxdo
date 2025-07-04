@@ -214,10 +214,10 @@ function delayClick(time) {
 
       // 如果还有下一个批次，等待指定的时间,同时，如果总共只有一个账号，也需要继续运行
       if (i + maxConcurrentAccounts < totalAccounts || i === 0) {
-        console.log(`不等待 ${delayBetweenBatches / 1000} 秒`);
-      /*  await new Promise((resolve) =>
+        console.log(`等待 ${delayBetweenBatches / 1000} 秒`);
+        await new Promise((resolve) =>
           setTimeout(resolve, delayBetweenBatches)
-        );*/
+        );
       } else {
         console.log("没有下一个批次，即将结束");
       }
